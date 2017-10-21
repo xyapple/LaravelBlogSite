@@ -17,10 +17,15 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 //put the individual routes inside the group
 Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
+
+    Route::get('/home', [
+        'uses'=>'HomeController@index',
+        'as'=>'home'
+    ]);
+
     Route::get('/post/create', [
         'uses'=>'PostsCOntroller@create',
         // this is naming the route
