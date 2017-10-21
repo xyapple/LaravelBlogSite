@@ -35,8 +35,13 @@ class PostsCOntroller extends Controller
      */
     public function store(Request $request)
     {
-        //
-        dd(all());
+        //dd($request->all());
+        
+        $this->validate($request,[
+            'title'=>'required|mix:255',
+            'featured'=>'required|image',
+            'content'=>'required',
+        ]);
     }
 
     /**
