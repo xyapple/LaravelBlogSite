@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //put the individual routes inside the group
-Route::group(['prefix'=>'admin'], function(){
+Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
     Route::get('/post/create', [
         'uses'=>'PostsCOntroller@create',
         // this is naming the route
