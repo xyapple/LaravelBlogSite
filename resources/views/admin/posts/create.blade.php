@@ -3,16 +3,7 @@
 @section('content')
     <div class='panel panel-defaul'>
 
-        @if (count($errors)>0)
-        <ul class='list-group'>
-            @foreach ($errors->all() as $error)
-                <li class='list-group-item text-danger'>
-                    {{$error}}
-                </li>
-            @endforeach
-        </ul>
-        @endif
-
+        @include('admin.includes.errors')
         <div class='panel-heading'>
         Create a New Post
         </div>

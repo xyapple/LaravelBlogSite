@@ -1,9 +1,11 @@
 @extends('layouts.app')
+@extends('layouts.app')
 
 @section('content')
     <div class='panel panel-defaul'>
 
-        @include('admin.includes.errors')
+            @include('admin.includes.errors')
+
         <div class='panel-heading'>
         Create a New Category
         </div>
