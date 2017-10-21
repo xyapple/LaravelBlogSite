@@ -23,6 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix'=>'admin'], function(){
     Route::get('/post/create', [
         'uses'=>'PostsCOntroller@create',
+        // this is naming the route
         'as'=>'post.create'
     ]);
 
