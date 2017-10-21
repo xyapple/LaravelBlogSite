@@ -27,14 +27,23 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
     ]);
 
     Route::get('/post/create', [
-        'uses'=>'PostsCOntroller@create',
+        'uses'=>'PostsController@create',
         // this is naming the route
         'as'=>'post.create'
     ]);
 
     Route::post('/post/store', [
-        'uses'=>'PostsCOntroller@store',
+        'uses'=>'PostsController@store',
         'as'=>'post.store'
+    ]);
+
+    Route::get('/category/create', [
+        'uses'=>'CategoryController@create',
+        'as'=>'category.create'
+    ]);
+    Route::post('/category/store', [
+        'uses'=>'CategoryController@store',
+        'as'=>'category.store'
     ]);
 
 });

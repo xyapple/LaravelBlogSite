@@ -12,13 +12,13 @@
             @endforeach
         </ul>
         @endif
-        
+
         <div class='panel-heading'>
         Create a New Post
         </div>
         <div class='panel-body'>
 
-            <form action={{route('post.store')}} method='post'>
+            <form action={{route('post.store')}} method='post' enctype="multipart/form-data">
             {{csrf_field()}}
             <div class='form-group'>
                 <label for="title">Title</label>
@@ -34,7 +34,7 @@
             </div>
             <div class='form-group'>
                 <div class='text-center'>
-                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <button class="btn btn-primary" type="submit">Post</button>
                 </div>
 
             </div>
