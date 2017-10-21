@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Category;
+
 class CategoryController extends Controller
 {
     /**
@@ -14,6 +16,7 @@ class CategoryController extends Controller
     public function index()
     {
         //
+        return view('admin.categories.index')->with('categories', Category::all());
     }
 
     /**
@@ -35,11 +38,16 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
         $this->validate($request,[
             'name'=>'required'
         ]);
-        dd($request->all());
+        //dd($request->all());
+        $category = new Category;
+        $category -> name = $request->name;
+        $category ->save();
+
+        return redirect()->back();
     }
 
     /**
