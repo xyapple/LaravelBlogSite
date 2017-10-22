@@ -18,7 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/test', function(){
-    return App\Post::find(2)->tags;
+    return App\User::find(1)->profile;
 });
 
 //put the individual routes inside the group
@@ -119,5 +119,43 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
         'uses'=>'TagsController@store',
         'as'=>'tag.store'
     ]);
+    //Users
+    Route::get('/users',[
+        'uses'=>'UsersController@index',
+        'as'=>'users'
+    ]);
+    Route::post('/users/store',[
+        'uses'=>'UsersController@store',
+        'as'=>'user.store'
+    ]);
+    Route::get('/users/create',[
+        'uses'=>'UsersController@create',
+        'as'=>'user.create'
+    ]);
+    Route::get('/users/delete/{id}',[
+        'uses'=>'UsersController@destroy',
+        'as'=>'user.delete'
+    ]);
+
+    Route::get('user/admin/{id}', [
+         'uses' => 'UsersController@admin',
+         'as' => 'user.admin'
+     ]);
+    Route::get('user/not-admin/{id}', [
+         'uses' => 'UsersController@not_admin',
+         'as' => 'user.not.admin'
+     ]);
+
+    //  Route::get('user/profile', [
+    //        'uses' => 'ProfilesController@index',
+    //        'as' => 'user.profile'
+    //    ]);
+     //
+    //  Route::post('/user/profile/update', [
+    //      'uses' => 'ProfilesController@update',
+    //      'as' => 'user.profile.update'
+    //  ]);
+
+
 
 });
