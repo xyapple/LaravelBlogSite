@@ -28,7 +28,7 @@
                     Edit
                 </td>
                 <td>
-                    <a href='{{route('posts.trashed',['id'=>$post->id])}}' class='btn btn-xs btn-success'>
+                    <a href='{{route('post.restore',['id'=>$post->id])}}' class='btn btn-xs btn-success'>
                         Restore
                     </a>
 

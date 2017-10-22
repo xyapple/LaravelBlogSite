@@ -21,14 +21,14 @@
                     {{$post ->title}}
                 </td>
                 <td>
-                    {{-- <a href='{{route('category.edit',['id'=>$category->id])}}' class='btn btn-xs btn-info'>
+                    <a href='{{route('post.edit',['id'=>$post->id])}}' class='btn btn-xs btn-info'>
                         Edit
-                    </a> --}}
-                    Edit
+                    </a>
+
                 </td>
                 <td>
                     <a href='{{route('post.delete',['id'=>$post->id])}}' class='btn btn-xs btn-danger'>
-                        Trush
+                        Trash
                     </a>
 
                 </td>
