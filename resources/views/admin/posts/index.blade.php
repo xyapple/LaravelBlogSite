@@ -14,7 +14,8 @@
             @foreach ($posts as $post)
             <tr>
                 <td>
-                    Image
+                    {{-- use getFeaturedAttribute() in Post.php --}}
+                    <img src='{{$post->featured}}' alt='{{$post ->title}} not found' width="90px" height="50px"/>
                 </td>
                 <td>
                     {{$post ->title}}
