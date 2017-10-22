@@ -122,10 +122,13 @@
                         </li>
 
                         <li class='list-group-item'>
-
-
                             <a href='{{route('post.create')}}'>Create new Post</a>
                         </li>
+                        @if(Auth::user()->admin)
+                        <li class='list-group-item'>
+                            <a href='{{route('settings')}}'>Setting</a>
+                        </li>
+                    @endif
                     </ul>
 
                 </div>
