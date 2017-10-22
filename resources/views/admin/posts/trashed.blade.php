@@ -8,7 +8,8 @@
             <th>Image</th>
             <th>Title </th>
             <th>Edit</th>
-            <th>Trash</th>
+            <th>Restore</th>
+            <th>Destroy</th>
         </thead>
         <tbody>
             @foreach ($posts as $post)
@@ -27,8 +28,14 @@
                     Edit
                 </td>
                 <td>
-                    <a href='{{route('post.delete',['id'=>$post->id])}}' class='btn btn-xs btn-danger'>
-                        Trush
+                    <a href='{{route('posts.trashed',['id'=>$post->id])}}' class='btn btn-xs btn-success'>
+                        Restore
+                    </a>
+
+                </td>
+                <td>
+                    <a href='{{route('post.kill',['id'=>$post->id])}}' class='btn btn-xs btn-danger'>
+                        Destroy
                     </a>
 
                 </td>

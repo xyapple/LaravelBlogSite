@@ -41,7 +41,18 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
         'uses' => 'PostsController@index',
         'as' => 'posts'
     ]);
-
+    Route::get('/post/delete/{id}', [
+        'uses'=>'PostsController@destroy',
+        'as'=>'post.delete'
+    ]);
+    Route::get('/post/trashed', [
+        'uses'=>'PostsController@trashed',
+        'as'=>'posts.trashed'
+    ]);
+    Route::get('/post/kill/{id}', [
+        'uses'=>'PostsController@kill',
+        'as'=>'post.kill'
+    ]);
 
 // Category
     Route::get('/category/create', [
