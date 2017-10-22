@@ -16,7 +16,8 @@ class PostsController extends Controller
      */
     public function index()
     {
-        //
+        //only fetech the post is not SoftDeleted
+        return view('admin.posts.index')->with('posts', Post::all());
     }
 
     /**
@@ -64,10 +65,13 @@ class PostsController extends Controller
             'content' => $request->content,
             'featured' => 'uploads/posts/' . $featured_new_name,
             'category_id' => $request->category_id,
+            // create a new post ->create-a-new-post
+            'slug'=>str_slug($request->title),
         ]);
 
         Session::flash('success', 'Post created succesfully.');
-       return redirect()->back();
+
+        return redirect()->back();
 
         //dd($request->all());
     }

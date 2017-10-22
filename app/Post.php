@@ -11,11 +11,11 @@ class Post extends Model
 
     //handle the MassAssignmentException error
     protected $fillable = [
-        'title', 'content', 'category_id','featured'
+        'title', 'content', 'category_id','featured','slug',
     ];
 
     protected $dates=['deleted_at'];
-    
+
     //a post can only belong to one Category
     public function category()
     {
