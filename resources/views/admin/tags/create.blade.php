@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class='panel panel-defaul'>
+    <div class="panel panel-default">
 
         @include('admin.includes.errors')
         <div class='panel-heading'>

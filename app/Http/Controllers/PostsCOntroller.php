@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Post;
 use Session;
+use App\Tag;
+
 
 class PostsController extends Controller
 {
@@ -34,7 +36,8 @@ class PostsController extends Controller
             Session::flash('info','You must have categories before creating a post.');
             return redirect()->back();
         }
-        return view('admin.posts.create')->with('categories', Category::all());
+        return view('admin.posts.create')->with('categories', Category::all())
+                                         ->with('tags', Tag::all());
     }
 
     /**
@@ -130,7 +133,7 @@ class PostsController extends Controller
         $post->content = $request->content;
         $post->category_id = $request->category_id;
         $post->save();
-    
+
         Session::flash('success', 'Post updated successfully.');
         return redirect()->route('posts');
 

@@ -17,6 +17,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/test', function(){
+    return App\User::find(1)->posts;
+});
 
 //put the individual routes inside the group
 Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){

@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class='panel panel-defaul'>
 
+  <div class="panel panel-default">
         @include('admin.includes.errors')
         <div class='panel-heading'>
         Create a New Post
@@ -26,6 +26,14 @@
                         <option value="{{$category->id}}">{{$category->name}}</option>
                     @endforeach
                 </select>
+            </div>
+            <div class='form-group'>
+                <label for="tags">Select Tag</label>
+                @foreach($tags as $tag)
+                   <div class="checkbox">
+                         <label><input type="checkbox" name="tags[]" value="{{ $tag->id }}">{{ $tag->tag }}</label>
+                   </div>
+                @endforeach
             </div>
 
             <div class='form-group'>
