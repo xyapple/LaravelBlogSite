@@ -18,7 +18,7 @@ class Admin
     public function handle($request, Closure $next)
     {
         //check auth user's permission
-        if(Auth::user()->admin)
+        if(!Auth::user()->admin)
         {
              Session::flash('info', 'You do not have permissions to perform this action.');
 

@@ -7,6 +7,7 @@ use App\User;
 use Session;
 use App\Profile;
 
+
 class UsersController extends Controller
 {
     /**
@@ -14,6 +15,11 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct()
+   {
+       $this->middleware('admin');
+   }
     public function index()
     {
         //
@@ -107,6 +113,7 @@ class UsersController extends Controller
         Session::flash('success', 'User deleted.');
         return redirect()->back();
     }
+
     public function admin($id) {
         $user = User::find($id);
         $user->admin = 1;
@@ -114,6 +121,7 @@ class UsersController extends Controller
         Session::flash('success', 'Successfully changed user permissions.');
         return redirect()->back();
     }
+    
     public function not_admin($id) {
         $user = User::find($id);
         $user->admin = 0;

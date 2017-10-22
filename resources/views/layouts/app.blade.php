@@ -90,9 +90,9 @@
                                </li>
                            @endif
 
-                          {{-- <li class="list-group-item">
+                          <li class="list-group-item">
                                    <a href="{{ route('user.profile') }}">My profile</a>
-                         </li> --}}
+                         </li>
 
                         <li class='list-group-item'>
                             <a href='{{route('tags')}}'>Tags</a>
