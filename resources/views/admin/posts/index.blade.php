@@ -2,6 +2,9 @@
 
 @section('content')
 <div class='panel panel-defaul'>
+    <div class='panel-heading'>
+        Public Posts
+    </div>
     <div class='panel-body'>
         <table class='table table-hover'>
         <thead>
@@ -11,6 +14,7 @@
             <th>Trash</th>
         </thead>
         <tbody>
+        @if($posts->count() > 0)
             @foreach ($posts as $post)
             <tr>
                 <td>
@@ -34,6 +38,9 @@
                 </td>
             </tr>
             @endforeach
+        @else
+            <th colspan="5" class="text-center">No public post</th>
+        @endif
         </tbody>
         </table>
     </div>
