@@ -54,7 +54,8 @@ class PostsController extends Controller
             'title'=>'required',
             'featured'=>'required|image',
             'content'=>'required',
-            'category_id'=>'required'
+            'category_id'=>'required',
+             'tags' => 'required'
         ]);
         //handle image upload
         $featured=$request->featured;
@@ -101,7 +102,8 @@ class PostsController extends Controller
         //
         $post= Post::find($id);
         return view('admin.posts.edit')->with('post', $post)
-                                      ->with('categories', Category::all());
+                                      ->with('categories', Category::all())
+                                      ->with('tags', Tag::all());
 
     }
 
@@ -118,7 +120,8 @@ class PostsController extends Controller
         $this->validate($request, [
            'title' => 'required',
            'content' => 'required',
-           'category_id' => 'required'
+           'category_id' => 'required',
+
        ]);
         $post = Post::find($id);
         if($request->hasFile('featured'))
@@ -132,7 +135,10 @@ class PostsController extends Controller
         $post->title = $request->title;
         $post->content = $request->content;
         $post->category_id = $request->category_id;
+
         $post->save();
+        
+         $post->tags()->sync($request->tags);
 
         Session::flash('success', 'Post updated successfully.');
         return redirect()->route('posts');

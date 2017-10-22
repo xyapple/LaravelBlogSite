@@ -18,7 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/test', function(){
-    return App\User::find(1)->posts;
+    return App\Post::find(2)->tags;
 });
 
 //put the individual routes inside the group
