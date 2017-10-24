@@ -115,7 +115,6 @@
                       </div>
 
                         <div class="post__content">
-
                             <div class="post__content-info">
 
                                 <h2 class="post__title entry-title text-center">
@@ -129,7 +128,7 @@
                                             <i class="seoicon-clock"></i>
 
                                             <time class="published" datetime="2016-04-17 12:00:00">
-                                               {{ $second_post->created_at->diffForHUmans() }}
+                                               {{ $second_post->created_at->toFormattedDateString() }}
                                            </time>
 
                                         </span>
@@ -207,7 +206,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                             <div class="heading">
-                                <h4 class="h1 heading-title">Laravel 5.3</h4>
+                                <h4 class="h1 heading-title">{{ $code->name }}/h4>
                                 <div class="heading-line">
                                     <span class="short-line"></span>
                                     <span class="long-line"></span>
@@ -217,32 +216,18 @@
                     </div>
                     <div class="row">
                         <div class="case-item-wrap">
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                <div class="case-item">
-                                    <div class="case-item__thumb">
-                                        <img src="app/img/3.jpg" alt="our case">
+                           @foreach($code->posts()->orderBy('created_at', 'desc')->take(3)->get() as $post)
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="case-item">
+                                        <div class="case-item__thumb">
+                                            <img src="{{ $post->featured }}" alt="our case">
+                                        </div>
+                                        <h6 class="case-item__title text-center"><a href="#">{{ $post->title }}</a></h6>
                                     </div>
-                                    <h6 class="case-item__title"><a href="#">Investigationes demonstraverunt legere</a></h6>
                                 </div>
-                            </div>
+                            @endforeach
 
-                            <div class="col-lg-4  col-md-4 col-sm-6 col-xs-12">
-                                <div class="case-item">
-                                    <div class="case-item__thumb">
-                                        <img src="app/img/1.png" alt="our case">
-                                    </div>
-                                    <h6 class="case-item__title">Claritas est etiam processus dynamicus</h6>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4  col-md-4 col-sm-6 col-xs-12">
-                                <div class="case-item">
-                                    <div class="case-item__thumb mouseover poster-3d lightbox shadow animation-disabled" data-offset="5">
-                                        <img src="app/img/2.png" alt="our case">
-                                    </div>
-                                    <h6 class="case-item__title">quod mazim placerat facer possim assum</h6>
-                                </div>
-                            </div>
+                          
                         </div>
                     </div>
                 </div>
@@ -251,7 +236,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                             <div class="heading">
-                                <h4 class="h1 heading-title">Laravel 5.3</h4>
+                                <h4 class="h1 heading-title">{{ $cook->name }}</h4>
                                 <div class="heading-line">
                                     <span class="short-line"></span>
                                     <span class="long-line"></span>
@@ -261,32 +246,18 @@
                     </div>
                     <div class="row">
                         <div class="case-item-wrap">
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                <div class="case-item">
-                                    <div class="case-item__thumb">
-                                        <img src="app/img/2.png" alt="our case">
+                           
+                         @foreach($cook->posts()->orderBy('created_at', 'desc')->take(3)->get() as $post)
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="case-item">
+                                        <div class="case-item__thumb">
+                                            <img src="{{ $post->featured }}" alt="our case">
+                                        </div>
+                                        <h6 class="case-item__title text-center"><a href="#">{{ $post->title }}</a></h6>
                                     </div>
-                                    <h6 class="case-item__title"><a href="#">Investigationes demonstraverunt legere</a></h6>
                                 </div>
-                            </div>
-
-                            <div class="col-lg-4  col-md-4 col-sm-6 col-xs-12">
-                                <div class="case-item">
-                                    <div class="case-item__thumb">
-                                        <img src="app/img/3.jpg" alt="our case">
-                                    </div>
-                                    <h6 class="text-center case-item__title">Claritas est etiam processus dynamicus</h6>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4  col-md-4 col-sm-6 col-xs-12">
-                                <div class="case-item">
-                                    <div class="case-item__thumb mouseover poster-3d lightbox shadow animation-disabled" data-offset="5">
-                                        <img src="app/img/4.jpg" alt="our case">
-                                    </div>
-                                    <h6 class="case-item__title">quod mazim placerat facer possim assum</h6>
-                                </div>
-                            </div>
+                        @endforeach
+                          
                         </div>
                     </div>
                 </div>
@@ -295,7 +266,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                             <div class="heading">
-                                <h4 class="h1 heading-title">Laravel 5.3</h4>
+                                  <h4 class="h1 heading-title">{{ $read->name }}</h4>
                                 <div class="heading-line">
                                     <span class="short-line"></span>
                                     <span class="long-line"></span>
@@ -305,32 +276,17 @@
                     </div>
                     <div class="row">
                         <div class="case-item-wrap">
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                <div class="case-item">
-                                    <div class="case-item__thumb">
-                                        <img src="app/img/5.jpg" alt="our case">
+                        @foreach($read->posts()->orderBy('created_at', 'desc')->take(3)->get() as $post)
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="case-item">
+                                        <div class="case-item__thumb">
+                                            <img src="{{ $post->featured }}" alt="our case">
+                                        </div>
+                                        <h6 class="case-item__title text-center"><a href="#">{{ $post->title }}</a></h6>
                                     </div>
-                                    <h6 class="case-item__title"><a href="#">Investigationes demonstraverunt legere</a></h6>
                                 </div>
-                            </div>
-
-                            <div class="col-lg-4  col-md-4 col-sm-6 col-xs-12">
-                                <div class="case-item">
-                                    <div class="case-item__thumb">
-                                        <img src="app/img/2.png" alt="our case">
-                                    </div>
-                                    <h6 class="case-item__title">Claritas est etiam processus dynamicus</h6>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4  col-md-4 col-sm-6 col-xs-12">
-                                <div class="case-item">
-                                    <div class="case-item__thumb mouseover poster-3d lightbox shadow animation-disabled" data-offset="5">
-                                        <img src="app/img/6.jpg" alt="our case">
-                                    </div>
-                                    <h6 class="case-item__title">quod mazim placerat facer possim assum</h6>
-                                </div>
-                            </div>
+                        @endforeach
+                          
                         </div>
                     </div>
                 </div>
