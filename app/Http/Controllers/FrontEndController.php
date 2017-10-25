@@ -24,4 +24,10 @@ class FrontEndController extends Controller
               ->with('cook', Category::find(5))
               ->with('settings', Settings::first());
     }
+    public function singlePost($slug){
+        $post = Post::where('slug', $slug)->first();
+        return view('single')->where('post', $post)
+                            ->with('title', $post->title)
+                              ->with('categories', Category::take(5)->get());
+    }
 }
