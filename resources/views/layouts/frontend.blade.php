@@ -43,6 +43,7 @@
 <div class="content-wrapper">
     
     @include('includes.header')
+   
 
     @yield('content')
 

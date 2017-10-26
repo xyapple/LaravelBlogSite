@@ -169,7 +169,7 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
        ]);
 
        //single page display
-       Route::get('/{slug}',[
+       Route::get('/post/{slug}',[
         'uses'=>'FrontEndController@singlePost',
         'as'=>'post.single'
        ]);
