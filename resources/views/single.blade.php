@@ -134,6 +134,19 @@
                         @endif
                         </div>
 
+                        <div class="comments">
+                        
+                              <div class="heading text-center">
+                                    <h4 class="h1 heading-title">Comments</h4>
+                                    <div class="heading-line">
+                                          <span class="short-line"></span>
+                                          <span class="long-line"></span>
+                                    </div>
+                              </div>
+                              
+                              @include('includes.disqus')
+                        </div>
+
                   </div>
             </main>
       </div>
