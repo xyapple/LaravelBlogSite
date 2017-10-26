@@ -29,6 +29,19 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
         'uses'=>'HomeController@index',
         'as'=>'home'
     ]);
+
+    //single page display
+    Route::get('/post/{slug}',[
+    'uses'=>'FrontEndController@singlePost',
+    'as'=>'post.single'
+    ]);
+
+    //category page
+    Route::get('/category/{id}', [
+        'uses'=>'FrontEndController@category',
+        'as'=>'category.single'
+    ]);
+    
 // Post
     Route::get('/post/create', [
         'uses'=>'PostsController@create',
@@ -166,12 +179,6 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
        Route::post('/settings/update', [
            'uses' => 'SettingsController@update',
            'as' => 'settings.update'
-       ]);
-
-       //single page display
-       Route::get('/post/{slug}',[
-        'uses'=>'FrontEndController@singlePost',
-        'as'=>'post.single'
        ]);
        
 });
