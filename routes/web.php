@@ -41,6 +41,11 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
         'uses'=>'FrontEndController@category',
         'as'=>'category.single'
     ]);
+        //category page
+    Route::get('/tag/{id}', [
+        'uses'=>'FrontEndController@tag',
+        'as'=>'tag.single'
+    ]);
     
 // Post
     Route::get('/post/create', [
