@@ -15,13 +15,14 @@ class FrontEndController extends Controller
     {
         return view('index')
               ->with('title', Settings::first()->site_name)
-              ->with('categories', Category::take(5)->get())
+              ->with('categories', Category::take(10)->get())
               ->with('first_post', Post::orderBy('created_at', 'desc')->first())
               ->with('second_post', Post::orderBy('created_at', 'desc')->skip(1)->take(1)->get()->first())
               ->with('third_post', Post::orderBy('created_at', 'desc')->skip(2)->take(1)->get()->first())
-              ->with('code', Category::find(2))
-              ->with('read', Category::find(4))
-              ->with('cook', Category::find(5))
+              ->with('Programming', Category::find(7))
+              ->with('Machine_Learning', Category::find(8))
+              ->with('Travel', Category::find(11))
+              ->with('All_About_Life',Category::find(12))
               ->with('settings', Settings::first());
     }
 
