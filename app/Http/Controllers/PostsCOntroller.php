@@ -7,7 +7,7 @@ use App\Category;
 use App\Post;
 use Session;
 use App\Tag;
-
+use Auth;
 
 class PostsController extends Controller
 {
@@ -39,6 +39,7 @@ class PostsController extends Controller
             return redirect()->back();
         }
         return view('admin.posts.create')->with('categories', Category::all())
+                                        
                                          ->with('tags', Tag::all());
     }
 
@@ -73,6 +74,7 @@ class PostsController extends Controller
             'category_id' => $request->category_id,
             // create a new post ->create-a-new-post
             'slug'=>str_slug($request->title),
+            'user_id'=>Auth::id,
         ]);
 
         Session::flash('success', 'Post created succesfully.');

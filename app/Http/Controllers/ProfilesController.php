@@ -85,8 +85,10 @@ class ProfilesController extends Controller
         $user->profile->youtube = $request->youtube;
         $user->profile->linkedin = $request->linkedin;
         $user->profile->about = $request->about;
+        
         $user->save();
         $user->profile->save();
+
         if($request->has('password'))
         {
             $user->password = bcrypt($request->password);

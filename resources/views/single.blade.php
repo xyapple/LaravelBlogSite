@@ -28,7 +28,7 @@
                                                 Posted by
 
                                                 <div class="post__author-name fn">
-                                                      <a href="#" class="post__author-link">Admin</a>
+                                                      <a href="#" class="post__author-link">{{$post->user->name}}</a>
                                                 </div>
 
                                           </div>
@@ -65,10 +65,7 @@
                                     </div>
                               </div>
 
-                              <div class="socials text-center">
-                                    <div class="addthis_inline_share_toolbox_gjor"></div>
-                              </div>
-
+                      
                               <!-- Arthur of the post -->
                               <div class="blog-details-author">
 
@@ -78,27 +75,24 @@
 
                                     <div class="blog-details-author-content">
                                           <div class="author-info">
-                                                <h5 class="author-name">Philip Demarco</h5>
-                                                <p class="author-info">SEO Specialist</p>
+                                                <h5 class="author-name">{{$post->user->name}}</h5>
+                                               
                                           </div>
-                                          <p class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                                euismod.
+                                          <p class="text">
+                                          {{$post->user->profile->about}}
                                           </p>
                                           <div class="socials">
 
-                                                <a href="#" class="social__item">
+                                                <a href="{{$post->user->profile->facebook}}" class="social__item" target="_blank">
                                                       <img src="{{asset('app/svg/circle-facebook.svg')}}" alt="facebook">
                                                 </a>
 
-                                                <a href="#" class="social__item">
-                                                      <img src="{{asset('app/svg/twitter.svg')}}" alt="twitter">
+
+                                                <a href="{{$post->user->profile->linkedin}}" class="social__item" target="_blank">
+                                                      <img src="{{asset('app/svg/google.svg')}}" alt="linkedin">
                                                 </a>
 
-                                                <a href="#" class="social__item">
-                                                      <img src="{{asset('app/svg/google.svg')}}" alt="google">
-                                                </a>
-
-                                                <a href="#" class="social__item">
+                                                <a href="$post->$user->profile->youtube" class="social__item" target="_blank">
                                                       <img src="{{asset('app/svg/youtube.svg')}}" alt="youtube">
                                                 </a>
 

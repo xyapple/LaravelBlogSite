@@ -11,7 +11,7 @@ class Post extends Model
 
     //handle the MassAssignmentException error
     protected $fillable = [
-        'title', 'content', 'category_id','featured','slug',
+        'title', 'content', 'category_id','featured','slug','user_id'
     ];
 
     public function getFeaturedAttribute($featured)
@@ -28,8 +28,13 @@ class Post extends Model
     }
     //many to many relationship so we have to make a peakV table
     // tags, posts tables ==> post_tag(we have to create a database table name post_tag)
-    public function tags(){
+    public function tags()
+    {
         return $this->belongsToMany('App\Tag');
+    }
+    public function user()
+    {
+        return $this->belongsTo('App\User');
     }
 
 }
