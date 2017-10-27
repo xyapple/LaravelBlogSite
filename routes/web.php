@@ -46,7 +46,17 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
         'uses'=>'FrontEndController@tag',
         'as'=>'tag.single'
     ]);
-    
+    //search
+    Route::get('/results', function(){
+            $posts = \App\Post::where('title','like',  '%'. request('query'). '%')->get();
+
+            return view('results')->with('posts', $posts)
+                                ->with('title', 'Search results : ' . request('query'))
+                                ->with('settings', \App\Settings::first())
+                                ->with('categories', \App\Category::take(5)->get())
+                                ->with('query', request('query'));
+    });
+
 // Post
     Route::get('/post/create', [
         'uses'=>'PostsController@create',

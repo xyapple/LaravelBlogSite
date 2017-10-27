@@ -97,7 +97,10 @@
 
 </svg>
 
+<!-- Overlay Search -->
+@include('includes.search')
 
+<!-- End Overlay Search -->
 
 <!-- JS Script -->
 
