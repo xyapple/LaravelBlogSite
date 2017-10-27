@@ -21,16 +21,7 @@ Auth::routes();
 Route::get('/test', function(){
     return App\User::find(1)->profile;
 });
-
-//put the individual routes inside the group
-Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
-
-    Route::get('/home', [
-        'uses'=>'HomeController@index',
-        'as'=>'home'
-    ]);
-
-    //single page display
+  //single page display
     Route::get('/post/{slug}',[
     'uses'=>'FrontEndController@singlePost',
     'as'=>'post.single'
@@ -55,7 +46,18 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
                                 ->with('settings', \App\Settings::first())
                                 ->with('categories', \App\Category::take(5)->get())
                                 ->with('query', request('query'));
+
     });
+
+//put the individual routes inside the group
+Route::group(['prefix'=>'admin','middleware'=>'auth'], function(){
+
+    Route::get('/home', [
+        'uses'=>'HomeController@index',
+        'as'=>'home'
+    ]);
+
+  
 
 // Post
     Route::get('/post/create', [
