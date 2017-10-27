@@ -18,9 +18,10 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('app/css/swiper.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app/css/primary-menu.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app/css/magnific-popup.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('app/css/bootstrap.min.css')}}">
 
     <!--Styles for RTL-->
-
+    <link rel="stylesheet" type="text/css" href="{{asset('app/css/carousel.css')}}">
     <!--<link rel="stylesheet" type="text/css" href="app/css/rtl.css">-->
 
     <!--External fonts-->
@@ -44,10 +45,8 @@
 
 @include('includes.header')
 
-    <div class="header-spacer">
-
-    </div>
-    
+    <div class="header-spacer"> </div>
+      @include('includes.carousel')
     <div class="container">
         <div class="row">
             <div class="col-lg-2"></div>
@@ -392,6 +391,7 @@
 <!-- JS Script -->
 
 <script src="{{ asset('app/js/jquery-2.1.4.min.js')}}" ></script>
+<script src="{{ asset('app/js/bootstrap.min.js')}}" ></script>
 <script src="{{ asset('app/js/crum-mega-menu.js')}}"   ></script>
 <script src="{{ asset('app/js/swiper.jquery.min.js')}}"></script>
 <script src="{{ asset('app/js/theme-plugins.js')}}"    ></script>
