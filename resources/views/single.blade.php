@@ -7,8 +7,13 @@
             <h1 class="stunning-header-title">{{ $post->title }}</h1>
       </div>
 </div>
+<br>
+{{-- AddThis Sharing --}}
+<div class="social text-center">
+<div class="addthis_inline_share_toolbox"></div>
+</div>
 
-{{-- Details --}}
+{{-- End of AddThis Sharing --}} {{-- Details --}}
 <div class="container">
       <div class="row medium-padding120">
             <main class="main">
@@ -65,7 +70,7 @@
                                     </div>
                               </div>
 
-                      
+
                               <!-- Arthur of the post -->
                               <div class="blog-details-author">
 
@@ -76,10 +81,10 @@
                                     <div class="blog-details-author-content">
                                           <div class="author-info">
                                                 <h5 class="author-name">{{$post->user->name}}</h5>
-                                               
+
                                           </div>
                                           <p class="text">
-                                          {{$post->user->profile->about}}
+                                                {{$post->user->profile->about}}
                                           </p>
                                           <div class="socials">
 
@@ -102,6 +107,10 @@
                               </div>
 
                         </article>
+
+
+
+
                         <div class="pagination-arrow">
 
                               @if($prev)
@@ -156,12 +165,12 @@
                                           </div>
 
                                           <div class="tags-wrap">
-                                               
-                                            
-                                                 @foreach($tags as $tag)
+
+
+                                                @foreach($tags as $tag)
                                                 <a href="{{route('tag.single', ['id'=>$tag->id])}}" class="w-tags-item">{{ $tag->tag }}</a>
                                                 @endforeach
-                                             
+
                                           </div>
                                     </div>
                               </aside>
@@ -169,9 +178,13 @@
 
                         <!-- End Sidebar-->
 
+
+
                   </div>
-            </main>
+
       </div>
+      </main>
+</div>
 </div>
 </div>
 

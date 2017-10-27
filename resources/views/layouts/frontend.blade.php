@@ -119,9 +119,12 @@
         @if(Session::has('subscribed'))
             toastr.success("{{ Session::get('subscribed') }}")
         @endif
-    </script>
+</script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f32d72ed600b80">
+</script>
 
 <!-- ...end JS Script -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-587d79f7e064cbd5"></script> 
 </body>
 </html>
