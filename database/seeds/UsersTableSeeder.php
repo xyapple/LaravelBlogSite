@@ -23,10 +23,11 @@ class UsersTableSeeder extends Seeder
         App\Profile::create([
             'user_id'=>$user->id,
             'avatar'=>'uploads/avatars/1.png',
-            'about' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, est veniam non corporis sunt quas voluptates eveniet perferendis repudiandae, voluptate natus optio eius reiciendis, placeat velit nemo molestiae fugiat fuga.',
-            'facebook' => 'https://www.facebook.com',
-            'youtube' => 'https://www.youtube.com',
-            'linkedin'=>'https://www.linkedin.com',
+            'about' => "Currently, I am a graduate student at Boston University computer information system program.  I am passionate about learning and exploring full stack web Development and Data analysis. 
+I enjoy helping others and social services which I am also a licensed mental health clinician and I had five years experiences in healthcare. 
+When I am not in front of the computer, you'll typically find me exploring nature, restore pieces of furniture or baking in the kitchen.",
+            'github' => 'https://github.com/xyapple',
+            'linkedin'=>'https://www.linkedin.com/in/yindeascentis/',
         ]);
 
     }

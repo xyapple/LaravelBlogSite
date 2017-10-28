@@ -33,13 +33,8 @@
                        </div>
 
                        <div class="form-group">
-                             <label for="fb">Facebook profile</label>
-                             <input type="text" name="facebook" value="{{ $user->profile->facebook }}" class="form-control">
-                       </div>
-
-                       <div class="form-group">
-                             <label for="youtube">Youtube profile</label>
-                             <input type="text" name="youtube" value="{{ $user->profile->youtube }}" class="form-control">
+                             <label for="fb">Github profile</label>
+                             <input type="text" name="github" value="{{ $user->profile->github }}" class="form-control">
                        </div>
                        <div class="form-group">
                              <label for="linkedin">Linkedin profile</label>

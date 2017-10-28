@@ -88,18 +88,16 @@
                                           </p>
                                           <div class="socials">
 
-                                                <a href="{{$post->user->profile->facebook}}" class="social__item" target="_blank">
-                                                      <img src="{{asset('app/svg/circle-facebook.svg')}}" alt="facebook">
+                                                <a href="{{$post->user->profile->github}}" class="social__item" target="_blank">
+                                                      <img src="{{asset('app/svg/github.png')}}" alt="facebook">
                                                 </a>
 
 
                                                 <a href="{{$post->user->profile->linkedin}}" class="social__item" target="_blank">
-                                                      <img src="{{asset('app/svg/google.svg')}}" alt="linkedin">
+                                                      <img src="{{asset('app/svg/linkedin.png')}}" alt="linkedin">
                                                 </a>
 
-                                                <a href="$post->$user->profile->youtube" class="social__item" target="_blank">
-                                                      <img src="{{asset('app/svg/youtube.svg')}}" alt="youtube">
-                                                </a>
+                              
 
                                           </div>
                                     </div>

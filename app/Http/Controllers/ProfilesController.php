@@ -65,8 +65,7 @@ class ProfilesController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email',
-            'facebook' => 'required|url',
-            'youtube' => 'required|url',
+            'github' => 'required|url',
             'linkedin' => 'required|url',
 
         ]);
@@ -81,8 +80,7 @@ class ProfilesController extends Controller
         }
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->profile->facebook = $request->facebook;
-        $user->profile->youtube = $request->youtube;
+        $user->profile->github = $request->github;
         $user->profile->linkedin = $request->linkedin;
         $user->profile->about = $request->about;
         
