@@ -8,44 +8,44 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
-          <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+          <img class="first-slide" src="{{asset('app/header/sliderOne.png')}}" alt="First slide">
           <div class="container">
-            <div class="carousel-caption d-none d-md-block text-left">
-              <h1>Example headline</h1>
+            <div class="carousel-caption d-none d-md-block text-left-top">
+              <h1></h1>
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <img class="second-slide" src="{{asset('app/header/sliderTwo.png')}}" alt="Second slide">
           <div class="container">
             <div class="carousel-caption d-none d-md-block">
-              <h1>Another example headline.</h1>
+              <h1></h1>
              
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <img class="third-slide" src="{{asset('app/header/sliderThree.png')}}" alt="Third slide">
           <div class="container">
             <div class="carousel-caption d-none d-md-block text-center">
-              <h1>One more for good measure.</h1>
+              <h1></h1>
            
             </div>
           </div>
         </div>
           <div class="carousel-item">
-          <img class="four-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <img class="four-slide" src="{{asset('app/header/sliderFour.png')}}" alt="Four slide">
           <div class="container">
             <div class="carousel-caption d-none d-md-block text-right">
-              <h1>One more for good measure.</h1>
+              <h1></h1>
             </div>
           </div>
         </div>
           <div class="carousel-item">
-          <img class="five-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <img class="five-slide" src="{{asset('app/header/sliderFive.png')}}" alt="Five slide">
           <div class="container">
             <div class="carousel-caption d-none d-md-block text-right">
-              <h1>One more for good measure.</h1>         
+              <h1></h1>         
             </div>
           </div>
         </div>
