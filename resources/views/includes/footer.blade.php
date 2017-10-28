@@ -11,11 +11,15 @@
                             <span class="short-line"></span>
                             <span class="long-line"></span>
                         </div>
-                        <p class="heading-text">Qolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibham
-                            liber tempor cum soluta nobis eleifend option congue nihil uarta decima et quinta.
-                            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                            ut aliquip ex ea commodo consequat eleifend option nihil. Investigationes demonstraverunt
-                            lectores legere me lius quod ii legunt saepius parum claram.
+                        <p class="heading-text text-center">
+                     In here, I try to answer this question: What inspires me? There are a lot of things that can inspire –  when we accomplish great things when we overcome adversity when we bring the cameras and document the detail of our journey, even the sheer beauty of nature can remind us just how lucky we are to be alive.
+
+                        </p>
+                        <p class="heading-text text-center">
+                        “There is no royal road to anything. One thing at a time, all things in succession. That which grows fast, withers as rapidly. That which grows slowly, endures.”
+                        </p>
+                        <p class="heading-text text-center">
+                        – Josiah Gilbert Holland
                         </p>
                     </div>
                 </div>
@@ -32,7 +36,7 @@
                         </div>
                         <div class="content">
                              <a href="#" class="title">{{ $settings->contact_number }}</a>
-                            <p class="sub-title">Mon-Fri 9am-6pm</p>
+                            <p class="sub-title">Email Us First</p>
                         </div>
                     </div>
                 </div>
@@ -44,7 +48,7 @@
                         </div>
                         <div class="content">
                              <a href="#" class="title">{{ $settings->contact_email }}</a>
-                            <p class="sub-title">online support</p>
+                            <p class="sub-title">Welcome to Email Us</p>
                         </div>
                     </div>
                 </div>
@@ -56,7 +60,7 @@
                         </div>
                         <div class="content">
                              <a href="#" class="title">{{ $settings->address }}</a>
-                            <p class="sub-title">795 South Park Avenue</p>
+                            <p class="sub-title">All the Good Stuff is happening </p>
                         </div>
                     </div>
                 </div>

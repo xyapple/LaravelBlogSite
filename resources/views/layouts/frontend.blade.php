@@ -49,7 +49,7 @@
 
 <!-- Subscribe Form -->
 
-@include('includes.subform')
+{{--  @include('includes.subform')  --}}
 
 <!-- End Subscribe Form -->
 </div>
