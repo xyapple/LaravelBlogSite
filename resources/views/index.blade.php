@@ -45,8 +45,10 @@
 
 @include('includes.header')
 
-    <div class="header-spacer"> </div>
-      @include('includes.carousel')
+    {{--  <div class="header-spacer"> </div>  --}}
+
+@include('includes.carousel')
+
     <div class="container">
         <div class="row">
             <div class="col-lg-2"></div>
