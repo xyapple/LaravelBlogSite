@@ -211,7 +211,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                             <div class="heading">
-                                <h4 class="h1 heading-title">{{ $Programming->name }}/h4>
+                                <h4 class="h1 heading-title">{{ $Programming->name }}</h4>
                                 <div class="heading-line">
                                     <span class="short-line"></span>
                                     <span class="long-line"></span>
@@ -304,7 +304,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                             <div class="heading">
-                                  <h4 class="h1 heading-title">{{ $All_About_Life->name }}</h4>
+                                  <h4 class="h1 heading-title">{{ $Photography->name }}</h4>
                                 <div class="heading-line">
                                     <span class="short-line"></span>
                                     <span class="long-line"></span>
@@ -314,7 +314,38 @@
                     </div>
                     <div class="row">
                         <div class="case-item-wrap">
-                        @foreach($All_About_Life->posts()->orderBy('created_at', 'desc')->take(3)->get() as $post)
+                        @foreach($Photography->posts()->orderBy('created_at', 'desc')->take(3)->get() as $post)
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="case-item">
+                                        <div class="case-item__thumb">
+                                            <img src="{{ $post->featured }}" alt="our case">
+                                        </div>
+                                        <h6 class="case-item__title text-center">
+                                        <a href="{{ route('post.single', ['slug' => $post->slug ]) }}">{{ $post->title }}</a></h6>
+                                    </div>
+                                </div>
+                        @endforeach
+                          
+                        </div>
+                    </div>
+                </div>
+                 <div class="padded-50"></div>
+                  <div class="padded-50"></div>
+                <div class="offers">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                            <div class="heading">
+                                  <h4 class="h1 heading-title">{{ $Food->name }}</h4>
+                                <div class="heading-line">
+                                    <span class="short-line"></span>
+                                    <span class="long-line"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="case-item-wrap">
+                        @foreach($Food->posts()->orderBy('created_at', 'desc')->take(3)->get() as $post)
                                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                     <div class="case-item">
                                         <div class="case-item__thumb">
