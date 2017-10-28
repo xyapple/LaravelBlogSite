@@ -34,7 +34,7 @@
           </div>
         </div>
           <div class="carousel-item">
-          <img class="four-slide" src="{{asset('app/header/sliderFour.png')}}" alt="Four slide">
+          <img class="four-slide" src="{{asset('app/header/slider4.jpg')}}" alt="Four slide">
           <div class="container">
             <div class="carousel-caption d-none d-md-block text-right">
               <h1></h1>
