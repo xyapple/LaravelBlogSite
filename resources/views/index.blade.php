@@ -46,12 +46,20 @@
 @include('includes.header')
 
     {{--  <div class="header-spacer"> </div>  --}}
+<!-- Overlay Search -->
 
-@include('includes.carousel')
+@include('includes.search')
+
+<!-- End Overlay Search -->
 
     <div class="container">
 
+
+
+@include('includes.carousel')
         <div class="row">
+        {{-- AddThis Sharing --}}
+
          <div class="col-lg-4">
                 <article class="hentry post post-standard has-post-thumbnail sticky">
 
@@ -410,12 +418,6 @@
     </symbol>
 
 </svg>
-
-<!-- Overlay Search -->
-
-@include('includes.search')
-
-<!-- End Overlay Search -->
 
 <!-- JS Script -->
 
