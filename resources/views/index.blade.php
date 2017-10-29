@@ -45,12 +45,12 @@
 
 
 @include('includes.header')
-  
+  @include('includes.carousel')
     <div class="container">
 
 
 
-@include('includes.carousel')
+
         <div class="row">
         {{-- AddThis Sharing --}}
 

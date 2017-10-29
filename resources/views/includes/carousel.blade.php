@@ -18,10 +18,10 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img class="second-slide" src="{{asset('app/header/sliderTwo.png')}}" alt="Second slide">
+          <img class="second-slide" src="{{asset('app/header/slider3.png')}}" alt="Second slide">
           <div class="container">
             <div class="carousel-caption d-none d-md-block text-right-top">
-              <h1>Passion </h1>
+              <h1 class="font-weight-bold font-italic">Passion </h1>
               <p>“Live each day as if your life had just begun.”</p>
               <p>– Johann Wolfgang Von Goethe</p>
             
@@ -54,7 +54,7 @@
           <div class="carousel-item">
           <img class="five-slide" src="{{asset('app/header/sliderFive.png')}}" alt="Five slide">
           <div class="container">
-            <div class="carousel-caption d-none d-md-block text-right">
+            <div class="carousel-caption d-none d-md-block text-left">
               <h1>Explore</h1> 
               <p>“The only way of finding the limits of the possible is by going beyond them into the impossible.”</p> 
  <p>– Arthur C. Clarke</p>        
