@@ -13,7 +13,7 @@
 
 Route::get('/', [
     'uses'=>'FrontEndController@index',
-    'as'=>'home',
+    'as'=>'index',
 ]);
 
 Auth::routes();
