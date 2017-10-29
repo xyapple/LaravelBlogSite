@@ -1,13 +1,13 @@
-@extends('layouts.frontend') @section('content')
-
-
+@extends('layouts.frontend') 
+@section('content')
 
 <div class="stunning-header stunning-header-bg-gray">
       <div class="stunning-header-content">
             <h1 class="stunning-header-title">{{ $post->title }}</h1>
       </div>
 </div>
-<br> {{-- AddThis Sharing --}}
+<br> 
+{{-- AddThis Sharing --}}
 <div class="social text-center">
       <div class="addthis_inline_share_toolbox"></div>
 </div>

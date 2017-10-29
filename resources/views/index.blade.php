@@ -49,7 +49,9 @@
 
     <div class="content-wrapper">
 
-        @include('includes.header') @include('includes.carousel')
+        @include('includes.header') 
+        
+        @include('includes.carousel')
         <div class="container">
 
             <div class="row">
@@ -203,7 +205,6 @@
             </div>
         </div>
 
-
         <div class="container-fluid">
             <div class="row medium-padding120 bg-border-color">
                 <div class="container">
@@ -271,38 +272,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="padded-50"></div>
-                        <div class="offers">
-                            <div class="row">
-                                <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="heading">
-                                        <h4 style="font-family:monospace;">{{ $Travel->name }}</h4>
-                                        <div class="heading-line">
-                                            <span class="short-line"></span>
-                                            <span class="long-line"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="case-item-wrap">
-                                    @foreach($Travel->posts()->orderBy('created_at', 'desc')->take(3)->get() as $post)
-                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                                        <div class="case-item">
-                                            <div class="case-item__thumb">
-                                                <img src="{{ $post->featured }}" alt="our case">
-                                            </div>
-                                            <h6 class="case-item__title text-center">
-                                                <a href="{{ route('post.single', ['slug' => $post->slug ]) }}">{{ $post->title }}</a>
-                                            </h6>
-                                        </div>
-                                    </div>
-                                    @endforeach
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="padded-50"></div>
                         <div class="padded-50"></div>
                         <div class="offers">
                             <div class="row">
@@ -319,6 +289,39 @@
                             <div class="row">
                                 <div class="case-item-wrap">
                                     @foreach($Photography->posts()->orderBy('created_at', 'desc')->take(3)->get() as $post)
+                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="case-item">
+                                            <div class="case-item__thumb">
+                                                <img src="{{ $post->featured }}" alt="our case">
+                                            </div>
+                                            <h6 class="case-item__title text-center">
+                                                <a href="{{ route('post.single', ['slug' => $post->slug ]) }}">{{ $post->title }}</a>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    @endforeach
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="padded-50"></div>
+
+                       <div class="padded-50"></div>
+                        <div class="offers">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="heading">
+                                        <h4 style="font-family:monospace;">{{ $Travel->name }}</h4>
+                                        <div class="heading-line">
+                                            <span class="short-line"></span>
+                                            <span class="long-line"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="case-item-wrap">
+                                    @foreach($Travel->posts()->orderBy('created_at', 'desc')->take(3)->get() as $post)
                                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                         <div class="case-item">
                                             <div class="case-item__thumb">
@@ -371,7 +374,8 @@
                 </div>
             </div>
         </div>
-
+        
+       =
     <!-- Overlay Search -->
     @include('includes.search')
     <!-- End Overlay Search -->
