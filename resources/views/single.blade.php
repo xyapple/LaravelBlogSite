@@ -1,5 +1,4 @@
-@extends('layouts.frontend') 
-@section('content')
+@extends('layouts.frontend') @section('content')
 
 
 
@@ -8,10 +7,9 @@
             <h1 class="stunning-header-title">{{ $post->title }}</h1>
       </div>
 </div>
-<br>
-{{-- AddThis Sharing --}}
+<br> {{-- AddThis Sharing --}}
 <div class="social text-center">
-<div class="addthis_inline_share_toolbox"></div>
+      <div class="addthis_inline_share_toolbox"></div>
 </div>
 
 {{-- End of AddThis Sharing --}} {{-- Details --}}
@@ -71,7 +69,6 @@
                                     </div>
                               </div>
 
-
                               <!-- Arthur of the post -->
                               <div class="blog-details-author">
 
@@ -98,7 +95,7 @@
                                                       <img src="{{asset('app/svg/linkedin.png')}}" alt="linkedin">
                                                 </a>
 
-                              
+
 
                                           </div>
                                     </div>
@@ -106,9 +103,6 @@
                               </div>
 
                         </article>
-
-
-
 
                         <div class="pagination-arrow">
 
@@ -162,10 +156,7 @@
                                                       <span class="long-line"></span>
                                                 </div>
                                           </div>
-
                                           <div class="tags-wrap">
-
-
                                                 @foreach($tags as $tag)
                                                 <a href="{{route('tag.single', ['id'=>$tag->id])}}" class="w-tags-item">{{ $tag->tag }}</a>
                                                 @endforeach
@@ -174,11 +165,7 @@
                                     </div>
                               </aside>
                         </div>
-
                         <!-- End Sidebar-->
-
-
-
                   </div>
 
       </div>

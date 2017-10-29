@@ -380,9 +380,7 @@
     <!-- Footer -->
     @include('includes.video')
     <!-- End Footer -->
-    <!-- contact -->
-    @include('includes.contact')
-    <!-- End contact -->
+
 
 
 

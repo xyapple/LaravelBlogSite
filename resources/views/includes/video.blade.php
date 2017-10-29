@@ -1,4 +1,4 @@
-<div class="videobody-wrapper">
+<div class="videobody">
 	<div class="container">
 		<div class="row">
 			<div class="background-wrap">
@@ -19,7 +19,10 @@
 							great things when we overcome adversity when we bring the cameras and document the detail of our journey, even the
 							sheer beauty of nature can remind us just how lucky we are to be alive.
 						</p>
-					
+					 <ul class="social-network social-circle">
+                        <li><a href="https://github.com/xyapple" class="icoGithub" title="github"><i class="fa fa-github"></i></a></li>
+                        <li><a href="www.linkedin.com/in/yindeascentis" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>		
 					</div>
 				</div>
 
