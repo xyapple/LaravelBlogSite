@@ -9,6 +9,7 @@
       <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
           <img class="first-slide" src="{{asset('app/header/sliderOne.png')}}" alt="First slide">
+          <div class="overlay"></div>
           <div class="container">
             <div class="carousel-caption d-none d-md-block text-left-top">
               <h1>Patience</h1>
@@ -19,9 +20,10 @@
         </div>
         <div class="carousel-item">
           <img class="second-slide" src="{{asset('app/header/slider3.png')}}" alt="Second slide">
+          <div class="overlay"></div>
           <div class="container">
             <div class="carousel-caption d-none d-md-block text-right-top">
-              <h1 class="font-weight-bold font-italic">Passion </h1>
+              <h1 class="super-heading">Passion </h1>
               <p>“Live each day as if your life had just begun.”</p>
               <p>– Johann Wolfgang Von Goethe</p>
             
@@ -30,6 +32,7 @@
         </div>
         <div class="carousel-item">
           <img class="third-slide" src="{{asset('app/header/sliderThree.png')}}" alt="Third slide">
+          <div class="overlay"></div>
           <div class="container">
             <div class="carousel-caption d-none d-md-block text-center">
               <h1>Persistent </h1>
@@ -41,6 +44,7 @@
         </div>
           <div class="carousel-item">
           <img class="four-slide" src="{{asset('app/header/slider4.jpg')}}" alt="Four slide">
+         <div class="overlay"></div>
           <div class="container">
             <div class="carousel-caption d-none d-md-block text-right">
               <h1>Fearless</h1>
@@ -53,6 +57,7 @@
         </div>
           <div class="carousel-item">
           <img class="five-slide" src="{{asset('app/header/sliderFive.png')}}" alt="Five slide">
+<div class="overlay"></div>
           <div class="container">
             <div class="carousel-caption d-none d-md-block text-left">
               <h1>Explore</h1> 

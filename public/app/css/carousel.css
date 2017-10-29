@@ -21,6 +21,16 @@ body {
     margin-bottom: 4rem;
 }
 
+/* overlay for better readibility of the caption  */
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+ background: #000;
+ opacity: 0.3;
+    transition: all 0.2s ease-out;
+}
 .carousel-indicators li {
     border-radius: 10px;
     margin: 1px 3px;
