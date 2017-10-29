@@ -1,0 +1,47 @@
+.videobody{
+position: absolute;
+width: 100%;
+height: 750px;
+background-color: rgba(17, 16, 16, 0.062);
+}
+.background-wrap {
+    position: fixed;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+#video-bg-elem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.content {
+    margin-top: 20%;
+   border: 10px solid rgba(144, 165, 180, 0.774);
+    padding: 10px 10px 10px 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.content h3 {
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #fff;
+    padding-top: 15%;
+    margin-bottom: 10px;
+}
+
+.content p {
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 3px;
+    color: #aaa;
+}
