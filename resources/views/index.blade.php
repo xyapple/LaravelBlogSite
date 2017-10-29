@@ -43,15 +43,9 @@
 
 <div class="content-wrapper">
 
+
 @include('includes.header')
-
-    {{--  <div class="header-spacer"> </div>  --}}
-<!-- Overlay Search -->
-
-@include('includes.search')
-
-<!-- End Overlay Search -->
-
+  
     <div class="container">
 
 
@@ -418,7 +412,11 @@
     </symbol>
 
 </svg>
+<!-- Overlay Search -->
 
+@include('includes.search')
+
+<!-- End Overlay Search -->
 <!-- JS Script -->
 
 <script src="{{ asset('app/js/jquery-2.1.4.min.js')}}" ></script>
