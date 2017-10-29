@@ -1,4 +1,5 @@
-@extends('layouts.frontend') @section('content')
+@extends('layouts.frontend') 
+@section('content')
 
 
 
@@ -55,7 +56,7 @@
 
                                     </div>
 
-                                    <div class="post__content-info">
+                                    <div class="post__content-info" style="color:#1a1818;">
 
                                           {!! $post->content !!}
 
