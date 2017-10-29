@@ -1,4 +1,4 @@
-<div class="videobody">
+<div class="videobody-wrapper">
 	<div class="container">
 		<div class="row">
 			<div class="background-wrap">
