@@ -3,9 +3,8 @@
             <div class="header-content-wrapper">
                 <div class="logo">
                     <div class="logo-text">
-                        <div class="logo-title" style="font-family:monospace; font-size:40px; font-weight:bold;">
-                     <a href="{{ route('index') }}">
-
+                        <div class="logo-title" style="font-family:monospace; font-size:48px; font-weight:bold;">
+                     <a href="{{ route('index') }}" style="color: #2f2c2c;">
                         {{$settings->site_name}}
                         </a>
                         </div>
@@ -24,8 +23,8 @@
                     </a>
                     <ul class="primary-menu-menu" style="overflow: hidden;">
                         @foreach($categories as $category)
-                            <li >
-                                  <a href="{{route('category.single',['id'=>$category->id])}}">{{ $category->name }}</a>
+                            <li>
+                                  <a href="{{route('category.single',['id'=>$category->id])}}" style="color: #474545; font-family:'Varela Round';">{{ $category->name }}</a>
                             </li>
                           @endforeach
                     </ul>

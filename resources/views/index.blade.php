@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
      <title>{{ $title }}</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/fonts.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/crumina-fonts.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/normalize.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/grid.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/styles.css')}}">
-
-
     <!--Plugins styles-->
 
     <link rel="stylesheet" type="text/css" href="{{ asset('app/css/jquery.mCustomScrollbar.min.css')}}">
@@ -19,6 +12,13 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('app/css/primary-menu.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('app/css/magnific-popup.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('app/css/bootstrap.min.css')}}">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/fonts.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/crumina-fonts.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/normalize.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/grid.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('app/css/styles.css')}}">
+
 
     <!--Styles for RTL-->
     <link rel="stylesheet" type="text/css" href="{{asset('app/css/carousel.css')}}">
@@ -209,7 +209,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                             <div class="heading">
-                                <h4 class="h1 heading-title">{{ $Programming->name }}</h4>
+                                <h4  style="font-family:monospace;">{{ $Programming->name }}</h4>
                                 <div class="heading-line">
                                     <span class="short-line"></span>
                                     <span class="long-line"></span>
@@ -240,7 +240,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                             <div class="heading">
-                                <h4 class="h1 heading-title">{{ $Machine_Learning->name }}</h4>
+                                <h4 style="font-family:monospace;">{{ $Machine_Learning->name }}</h4>
                                 <div class="heading-line">
                                     <span class="short-line"></span>
                                     <span class="long-line"></span>
@@ -271,7 +271,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                             <div class="heading">
-                                  <h4 class="h1 heading-title">{{ $Travel->name }}</h4>
+                                  <h4 style="font-family:monospace;">{{ $Travel->name }}</h4>
                                 <div class="heading-line">
                                     <span class="short-line"></span>
                                     <span class="long-line"></span>
@@ -302,7 +302,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                             <div class="heading">
-                                  <h4 class="h1 heading-title">{{ $Photography->name }}</h4>
+                                  <h4 style="font-family:monospace;">{{ $Photography->name }}</h4>
                                 <div class="heading-line">
                                     <span class="short-line"></span>
                                     <span class="long-line"></span>
@@ -333,7 +333,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                             <div class="heading">
-                                  <h4 class="h1 heading-title">{{ $Food->name }}</h4>
+                                  <h4 style="font-family:monospace;">{{ $Food->name }}</h4>
                                 <div class="heading-line">
                                     <span class="short-line"></span>
                                     <span class="long-line"></span>
