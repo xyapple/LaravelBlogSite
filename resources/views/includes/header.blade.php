@@ -3,7 +3,7 @@
             <div class="header-content-wrapper">
                 <div class="logo">
                     <div class="logo-text">
-                        <div class="logo-title">
+                        <div class="logo-title" style="font-family:monospace; font-size:40px; font-weight:bold;">
                      <a href="{{ route('index') }}">
 
                         {{$settings->site_name}}

@@ -3253,7 +3253,8 @@ textarea {
     line-height: 1; }
     .logo .logo-text .logo-title {
       font-size: 27px;
-      text-transform: uppercase;
+      text-transform: uppercase;  
+      font-family: 'Source Code Pro';
       color: #2f2c2c; }
     .logo .logo-text .logo-sub-title {
       font-size: 10px;
